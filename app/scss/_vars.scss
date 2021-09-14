@@ -1,0 +1,82 @@
+$default: #515151;
+$accent: #fff;
+$bg: #19B2E2;
+
+%montserrat-light {
+  font-family: "Montserrat-Light", sans-serif;
+  font-weight: 300;
+}
+%montserrat-regular {
+  font-family: "Montserrat-Regular", sans-serif;
+  font-weight: 400;
+}
+%montserrat-medium {
+  font-family: "Montserrat-Medium", sans-serif;
+  font-weight: 500;
+}
+%montserrat-semiBold {
+  font-family: "Montserrat-SemiBold", sans-serif;
+  font-weight: 600;
+}
+%montserrat-bold {
+  font-family: "Montserrat-Bold", sans-serif;
+  font-weight: 700;
+}
+
+%pragmatica-extraLight {
+  font-family: "PragmaticaExtended-ExtraLight", sans-serif;
+  font-weight: 200;
+}
+%pragmatica-book {
+  font-family: "PragmaticaExtended-Book", sans-serif;
+  font-weight: 400;
+}
+%pragmatica-bold {
+  font-family: "PragmaticaExtended-Bold", sans-serif;
+  font-weight: 700;
+}
+
+%gothampro-light {
+  font-family: "GothamPro-Light", sans-serif;
+  font-weight: 300;
+}
+%gothampro-medium {
+  font-family: "GothamPro-Medium", sans-serif;
+  font-weight: 500;
+}
+
+%aqum-regular {
+  font-family: "Aqum-Regular", sans-serif;
+  font-weight: 400;
+}
+
+%astera-regular {
+  font-family: "Astera-Regular", sans-serif;
+  font-weight: 400;
+}
+
+
+%bg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin laptop-L {
+  @media (max-width: 1200px) { @content; }
+}
+@mixin laptop {
+  @media (max-width: 992px) { @content; }
+}
+@mixin tablet-L {
+  @media (max-width: 768px) { @content; }
+}
+@mixin tablet {
+  @media (max-width: 630px) { @content; }
+}
+@mixin portrait-phones {
+  @media (max-width: 530px) { @content; }
+}
+@mixin mobile-L {
+  @media (max-width: 425px) { @content; }
+};
