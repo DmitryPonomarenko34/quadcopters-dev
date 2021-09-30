@@ -55,11 +55,23 @@ $bg: #19B2E2;
   font-weight: 400;
 }
 
-
 %bg {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+%link{
+  width: 100%;
+  max-width: 261px;
+  @extend %montserrat-bold;
+  color: $accent;
+  text-align: center;
+  padding: 17px 0 19px;
+  padding-right: 104px;
+  background-color: $bg;
+  border-radius: 20px;
+  border-top-right-radius: 0;
 }
 
 @mixin laptop-L {

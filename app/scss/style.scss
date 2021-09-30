@@ -6,5 +6,260 @@
 @import 'components/header';
 @import 'components/footer';
 
+.first {
+  &__slide{
+    position: relative;
+    height: 100vh;
+    color: rgb(226, 219, 219);
+    @extend %bg;
+    z-index: 1;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.63);
+      z-index: -1;
+    }
+  }
+  &__container{
+    border-left: 1px solid rgba(134, 134, 134, 0.9);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: 71%;
+    background-position: 88% 74%;
+    position: relative;
+    &::before,
+    &::after{
+      content: '';
+      position: absolute;
+      @extend %bg;
+      z-index: -1;
+      background-image: url('../images/icons/multi/spriteMulti.svg#decor_02');
+      width: 375px;
+      height: 324px;
+    }
+    &::before{
+      top: 24.7%;
+      left: -18.5%;
+    }
+    &::after{
+      right: -21.5%;
+      bottom: 18%;
+      transform: rotate(90deg);
+    }
+  }
+  &__title{
+    margin-bottom: 28px;
+    font-size: 51px;
+    text-transform: uppercase;
+    line-height: 70px;
+    max-width: 400px;
+    @extend %astera-regular;
+  }
+  &__title--accent{
+    color: $bg;
+  }
+  &__text{
+    max-width: 531px;
+    margin-bottom: 56px;
+  }
+  &__link{
+    display: inline-block;
+    position: relative;
+    margin-bottom: 3.5%;
+    @extend %link;
+    &::before{
+      content: '';
+      position: absolute;
+      right: 40px;
+      top: 20px;
+      width: 64px;
+      height: 8px;
+      background-image: url('../images/icons/multi/spriteMulti.svg#arrow-right');
+      @extend %bg;
+    }
+  }
+  &__img{
+    position: absolute;
+    right: 21%;
+    bottom: 23%;
+    z-index: -1;
+    &::before{
+      content: '';
+      position: absolute;
+      width: 100%;
+      max-width: 630px;
+      height: 630px;
+      z-index: -1;
+      background: $bg;
+      right: 13%;
+      bottom: 0;
+      opacity: 0.66;
+      border-radius: 50%;
+      filter: blur(250px);
+    }
+  }
+  &__img--right{
+    right: 3.8%;
+    bottom: 14%;
+  }
+  &__img--big{
+    right: 12%;
+    bottom: 6%;
+  }
+  &__arrows{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    height: 69px;
+    display: flex;
+    align-items: center;
+    transform: translateX(-50%);
+    &::before{
+      content: '|';
+      font-size: 0;
+      left: 97px;
+      position: absolute;
+      width: 1px;
+      bottom: -4px;
+      height: 100%;
+      background-color: $accent;
+    }
+  }
+  .slick-dots{
+    position: absolute;
+    right: 17%;
+    height: 48%;
+    top: 36%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    list-style-type: none; 
+    counter-reset:  item; 
+    &::before,
+    &::after{
+      content: '';
+      position: absolute;
+      height: 15%;
+      width: 1px;
+      right: 20px;
+      background-color: $accent;
+    }
+    &::before{
+      top: 19%;
+    }
+    &::after{
+      bottom: 19%;
+    }
+  }
+  /* скрытие всех пуль по умолчанию */
+  .slick-dots li{
+    display: none;
+    transform: rotate(90deg);
+    @extend %montserrat-medium;
+    color: $accent;
+    &:nth-child(-n+9)::before{
+      content: '0' counter(item);
+      counter-increment: item;
+    }
+    &:nth-child(n+10)::before{
+      content: counter(item);
+      counter-increment: item;
+    }
+  }
+  .slick-dots button{
+    font-size: 0;
+    border: none;
+    background-color: transparent;
+  }
+  // /* отображаются только активные пули и 2 маркера рядом с ним */
+  .slick-dots li.slick-active,
+  .slick-dots li.slick-active + li,
+  .slick-dots li.slick-active + li + li {
+    display: block;
+  }
+  // /* отображение последних трех маркеров, когда класс slick-active не применяется к какому-либо li перед ними */
+  .slick-dots li:nth-last-child(1),
+  .slick-dots li:nth-last-child(2),
+  .slick-dots li:nth-last-child(3) {
+    display: block;
+  }
+  // /* скрытие последних трех пуль, если перед ними существуют slick-active*/
+  .slick-dots li.slick-active ~ li:nth-last-child(1),
+  .slick-dots li.slick-active ~ li:nth-last-child(2),
+  .slick-dots li.slick-active ~ li:nth-last-child(3) {
+    display: none;
+  }
+
+   /* определенные условия, чтобы всегда отображать последние три маркера */
+   .slick-dots li.slick-active + li + li:nth-last-child(3),
+   .slick-dots li.slick-active + li + li:nth-last-child(2),
+   .slick-dots li.slick-active + li + li:nth-last-child(1),
+   .slick-dots li.slick-active + li:nth-last-child(3),
+   .slick-dots li.slick-active + li:nth-last-child(2),
+   .slick-dots li.slick-active + li:nth-last-child(1){
+     display: block;
+   }
+   .slick-dots .slick-active{
+    @extend %montserrat-semiBold;
+    color: $bg;
+    font-size: 36px;
+  }
+  .slick-arrow {
+    @extend %montserrat-light;
+    position: relative;
+    font-size: 14px;
+    line-height: 17px;
+    color: $accent;
+    padding: 0 10px 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    &::before{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      height: 8px;
+      @extend %bg;
+      width: 64px;
+      fill: #787878;
+    }
+    &:focus{
+      color: $bg;
+    }
+  }
+  .slick-next{
+    margin-left: 66px;
+    &::before{
+      left: 50%;
+      transform: translateX(-50%);
+      background-image: url('../images/icons/multi/arrow-right--grey.svg');
+    }
+    &:focus{
+      &::before{
+        background-image: url('../images/icons/multi/arrow-right--blue.svg');
+      }
+    }
+  }
+  .slick-prev{
+    &::before{
+      right: 50%;
+      transform: translateX(50%);
+      background-image: url('../images/icons/multi/arrow-left--grey.svg');
+    }
+    &:focus{
+      &::before{
+        background-image: url('../images/icons/multi/arrow-left--blue.svg');
+      }
+    }
+  }
+}
+
 
 @import 'media';

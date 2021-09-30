@@ -28,6 +28,7 @@
     "imagemin-pngquant": "^9.0.2",
     "imagemin-webp": "^6.0.0",
     "jquery": "^3.5.1",
+    "slick-carousel": "^1.8.1",
     "svgxuse": "^1.2.6"
   },
   "dependencies": {}
