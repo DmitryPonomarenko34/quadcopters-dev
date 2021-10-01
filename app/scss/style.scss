@@ -34,6 +34,7 @@
     background-size: 71%;
     background-position: 88% 74%;
     position: relative;
+    max-width: 1250px;
     &::before,
     &::after{
       content: '';
@@ -142,6 +143,7 @@
     justify-content: space-between;
     list-style-type: none; 
     counter-reset:  item; 
+    pointer-events: none;
     &::before,
     &::after{
       content: '';
@@ -260,6 +262,107 @@
     }
   }
 }
+
+.about {
+  padding: 100px 0 390px;
+  position: relative;
+  &__container{
+    position: relative;
+  }
+  &__decor-title{
+    position: absolute;
+    z-index: -1;
+    font-size: calc(48px + (288 - 48) * ((100vw - 380px) / (1920 - 380)));
+    line-height: 277px;
+    left: -21%;
+    top: -31%;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #000;
+    @extend %pragmatica-bold;
+
+  }
+  &__inner{
+  }
+  &__title{
+    margin-bottom: 30px;
+  }
+  &__text{
+    max-width: 688px;
+    margin-bottom: 90px;
+  }
+  &__info{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 430px;
+    &--truck{
+      width: 67px;
+      height: 41px;
+    }
+    &--protection{
+      width: 51px;
+      height: 59px;
+    }
+    &--marker{
+      width: 41px;
+      height: 63px;
+    }
+  }
+  &__info-item{
+    text-align: center;
+    margin-bottom: 58px;
+    &:nth-child(3){
+      margin: 0 auto;
+      margin-bottom: 0;
+    }
+  }
+  &__info-box{
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    background-color: $default;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 11px;
+    svg{
+      width: 55px;
+      height: 55px;
+      fill: $bg;
+    }
+  }
+  &__decor{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 57px;
+    right: 119px;
+    svg{
+      fill: $bg;
+    }
+  }
+  &__decor-item{
+    transform: skewX(-34deg);
+    background-color: $bg;
+  }
+  &__decor-item--big{
+    height: 330px;
+    width: 182px;
+  }
+  &__decor-item--min{
+    width: 94px;
+    height: 172px;
+    margin-left: 61px;
+  }
+  &__img{
+   position: absolute;
+   right: 0;
+   bottom: 0;
+  }
+}
+
+
 
 
 @import 'media';

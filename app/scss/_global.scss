@@ -25,5 +25,15 @@ body {
 .container {
   margin: 0 auto;
   padding: 0 15px;
-  max-width: 1250px;
+  max-width: 1190px;
+}
+
+.title{
+  @extend %pragmatica-bold;
+  font-size: 72px;
+  line-height: 70px;
+  color: $default;
+  &--accent{
+    color: $bg;
+  }
 }
