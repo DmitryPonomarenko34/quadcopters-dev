@@ -12,4 +12,11 @@ window.onload = function () {
     appendArrows: $('.first__arrows'),
     appendDots: '.slick-list'
   });
+
+  let filetAttr = document.querySelector('.catalog__option[data-filter]');
+  console.log(filetAttr);
+
+  if(filetAttr){
+    
+  }
 }
