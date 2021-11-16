@@ -548,7 +548,7 @@
   background-image: url('../images/content/faq/decor.png');
   background-position: right bottom;
   background-repeat: no-repeat;
-  background-size: 55%;
+  background-size: 54%;
 
   &__title {
     text-align: center;
@@ -556,11 +556,11 @@
   }
 
   &__accardeon {
-    margin-bottom: 92px;
+    margin-bottom: 67px;
   }
 
   &__img {
-    transform: translateX(-40%);
+    transform: translate(-40%, 2.5%);
   }
 }
 
@@ -629,13 +629,66 @@
     margin: 58px 0;
     display: none;
     max-width: 688px;
-    &--open{
+
+    &--open {
       display: block;
     }
   }
 
   &__text {}
 }
+
+.footer {
+  padding: 87px 0 112px;
+  background-color: #101010;
+  &__container {
+    max-width: 636px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 73px;
+  }
+
+  &__list-item {
+    +.footer__list-item {
+      margin-left: 66px;
+    }
+  }
+
+  &__list-link {
+    @extend %montserrat-light;
+    color: $accent;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 46px;
+  }
+  &__logo-img{
+    margin: 0 auto;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 74px;
+  }
+
+  &__items-link {
+    color: $bg;
+    font-size: 24px;
+    @extend %montserrat-semiBold;
+  }
+
+  &__copy {
+    text-align: center;
+    @extend .footer__items-link;
+  }
+}
+
+
 
 
 
