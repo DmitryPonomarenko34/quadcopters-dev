@@ -13,10 +13,17 @@ window.onload = function () {
     appendDots: '.slick-list'
   });
 
-  let filetAttr = document.querySelector('.catalog__option[data-filter]');
-  console.log(filetAttr);
-
-  if(filetAttr){
-    
-  }
+  let accardeonTrigger = $('.accardeon__title');
+  let accardeonContent = $('.accardeon__content');
+  let accardeontOpenClass = $('.accardeon__content--open');
+  accardeonTrigger.on('click', function () {
+    $(this).next(accardeonContent).slideToggle();
+    $(this).toggleClass('accardeon__title--open');
+    if ($(this).next().hasClass('accardeon__content--open')) {
+      setTimeout(() => {
+        $(this).next().removeClass('accardeon__content--open');
+      }, 450);
+    }
+  });
+  accardeontOpenClass.prev().addClass('accardeon__title--open');
 }

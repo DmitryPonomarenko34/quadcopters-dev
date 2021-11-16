@@ -543,5 +543,100 @@
   }
 }
 
+.faq {
+  padding-top: 44px;
+  background-image: url('../images/content/faq/decor.png');
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: 55%;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 119px;
+  }
+
+  &__accardeon {
+    margin-bottom: 92px;
+  }
+
+  &__img {
+    transform: translateX(-40%);
+  }
+}
+
+.accardeon {
+  &__item {
+    padding: 12px 30px;
+    width: 100%;
+    border-radius: 30px;
+    margin: 0 auto;
+    max-width: 917px;
+
+    &:nth-child(odd) {
+      background-color: #a4e7fc;
+    }
+
+    &:nth-child(even) {
+      background-color: #ebebeb;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 29px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    font-size: 24px;
+    @extend %montserrat-semiBold;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      background-color: currentColor;
+      border-radius: 10px;
+      transition: ease 0.3s transform;
+    }
+
+    &::before {
+      width: 20px;
+      height: 6px;
+      top: 7px;
+    }
+
+    &::after {
+      height: 20px;
+      width: 6px;
+      right: 7px;
+    }
+
+    &--open {
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        top: 0;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__content {
+    margin: 58px 0;
+    display: none;
+    max-width: 688px;
+    &--open{
+      display: block;
+    }
+  }
+
+  &__text {}
+}
+
+
 
 @import 'media';
