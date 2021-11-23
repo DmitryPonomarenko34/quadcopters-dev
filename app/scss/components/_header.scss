@@ -6,10 +6,12 @@
   z-index: 10;
   padding: 38px 15px 88px;
   overflow-x: hidden;
-  &__container{
+
+  &__container {
     position: relative;
     max-width: 1180px;
-    &::before{
+
+    &::before {
       content: '';
       position: absolute;
       border-bottom: 1px solid rgba(134, 134, 134, 0.9);
@@ -18,53 +20,109 @@
       bottom: 0;
     }
   }
+
   &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   &__logo {
     transform: translateY(-10px);
   }
+
+  &--second {
+    position: static;
+    padding: 50px 0 70px;
+    background-color: #0f1c30;
+
+    .header {
+      &__container {
+        &::before {
+          display: none;
+        }
+      }
+
+      &__logo {
+        transform: translate(14px, 5px);
+      }
+    }
+
+    .menu {
+      margin-left: 6%;
+
+      &__list-item {
+        +.menu__list-item {
+          margin-left: 78px;
+        }
+      }
+    }
+
+    .user-action {
+      margin-right: 3.6%;
+
+      &__link {
+        +.user-action__link {
+          margin-left: 45px;
+        }
+      }
+    }
+    .user-area{
+      transform: translateY(-6px);
+    }
+    .basket{
+      transform: translateY(-4px);
+    }
+  }
 }
+
 .menu {
   margin-left: 7%;
+
   &__list {
     display: flex;
   }
+
   &__list-item {
-    +.menu__list-item{
+    +.menu__list-item {
       margin-left: 73px;
     }
   }
+
   &__list-link {
     color: $accent;
     @extend %montserrat-light;
   }
 }
+
 .user-action {
   margin-right: 4%;
+
   &__link {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    +.user-action__link{
+
+    +.user-action__link {
       margin-left: 41px;
     }
   }
 }
+
 .user-area {
   transform: translateY(-3px);
   width: 44px;
   border-radius: 50%;
   height: 44px;
   background-color: $accent;
+
   svg {
     width: 27px;
     height: 27px;
     fill: $bg;
   }
 }
+
 .basket {
   position: relative;
   border-radius: 20px;
@@ -72,11 +130,13 @@
   height: 80px;
   background: linear-gradient(313.2deg, #19B2E2 16.89%, #D7ECF3 116.37%);
   box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.6);
+
   svg {
     width: 30px;
     height: 30px;
     fill: $default;
   }
+
   &__num {
     position: absolute;
     display: inline-flex;

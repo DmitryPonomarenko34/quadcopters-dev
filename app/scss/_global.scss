@@ -29,8 +29,8 @@ body {
 }
 
 .title{
-  @extend %pragmatica-bold;
-  font-size: 72px;
+  @extend %astera-regular;
+  font-size: 33px;
   line-height: 70px;
   color: $default;
   &--accent{
