@@ -1,5 +1,18 @@
 window.onload = function () {
 
+  $('.burger').on('click', function () {
+    $(this).toggleClass('burger--active');
+    $(this).next().toggleClass('menu__list--active');
+    $('.header').toggleClass('header--bg');
+  });
+
+  if ($(window).width() <= 1440) {
+    let headerHeight = $('.header').innerHeight();
+
+    $('.first__container').css('padding-top', headerHeight);
+    $('.menu__list').css('padding-top', headerHeight);
+  }
+
   $('.first__slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -9,8 +22,8 @@ window.onload = function () {
     fade: true,
     prevArrow: '<button type="button" class="slick-prev">Назад</button>',
     nextArrow: '<button type="button" class="slick-next">Вперед</button>',
-    appendArrows: $('.first__arrows'),
-    appendDots: '.slick-list'
+    // appendArrows: $('.first__arrows'),
+    appendDots: '.slick-list',
   });
 
   let accardeonTrigger = $('.accardeon__title');
@@ -36,6 +49,7 @@ window.onload = function () {
     prevArrow: '<button type="button" class="slick-prev"><svg width="29" height="53" viewBox="0 0 29 53" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25.6104 1L1.00002 27.8077L27.8077 52.418" stroke="black"/></svg></button>',
     asNavFor: '.slider-product__nav'
   });
+
   $('.slider-product__nav').slick({
     slidesToShow: 2,
     slidesToScroll: 1,

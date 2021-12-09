@@ -78,7 +78,6 @@
 }
 
 .slider-product {
-
   &__for {
     .slick-arrow {
       position: absolute;
@@ -110,3 +109,5 @@
     cursor: pointer;
   }
 }
+
+@import 'media';

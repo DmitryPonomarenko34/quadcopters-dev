@@ -72,6 +72,7 @@
 
   &__title--accent {
     color: $bg;
+    display: block;
   }
 
   &__text {
@@ -88,7 +89,7 @@
     &::before {
       content: '';
       position: absolute;
-      right: 40px;
+      right: 13px;
       top: 20px;
       width: 64px;
       height: 8px;
@@ -131,23 +132,14 @@
 
   &__arrows {
     position: absolute;
-    bottom: 40px;
+
     left: 50%;
     height: 69px;
     display: flex;
     align-items: center;
     transform: translateX(-50%);
 
-    &::before {
-      content: '|';
-      font-size: 0;
-      left: 97px;
-      position: absolute;
-      width: 1px;
-      bottom: -4px;
-      height: 100%;
-      background-color: $accent;
-    }
+
   }
 
   .slick-dots {
@@ -243,8 +235,12 @@
   }
 
   .slick-arrow {
+    position: absolute;
+    bottom: 55px;
+    left: 53%;
+    z-index: 2;
+    transform: translateX(-50%);
     @extend %montserrat-light;
-    position: relative;
     font-size: 14px;
     line-height: 17px;
     color: $accent;
@@ -269,12 +265,22 @@
   }
 
   .slick-next {
-    margin-left: 66px;
 
     &::before {
       left: 50%;
       transform: translateX(-50%);
       background-image: url('../images/icons/multi/arrow-right--grey.svg');
+    }
+
+    &::after {
+      content: '|';
+      font-size: 0;
+      left: -10px;
+      position: absolute;
+      width: 1px;
+      bottom: -4px;
+      height: 100%;
+      background-color: $accent;
     }
 
     &:focus {
@@ -285,6 +291,8 @@
   }
 
   .slick-prev {
+    left: calc(53% - 75px - 20px);
+
     &::before {
       right: 50%;
       transform: translateX(50%);

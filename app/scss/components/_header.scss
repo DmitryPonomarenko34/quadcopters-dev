@@ -25,6 +25,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 48px;
   }
 
   &__logo {
@@ -32,7 +33,7 @@
   }
 
   &--second {
-    position: static;
+    position: relative;
     padding: 50px 0 70px;
     background-color: #0f1c30;
 
@@ -41,6 +42,10 @@
         &::before {
           display: none;
         }
+      }
+
+      &__inner {
+        padding-bottom: 0;
       }
 
       &__logo {
@@ -53,7 +58,7 @@
 
       &__list-item {
         +.menu__list-item {
-          margin-left: 78px;
+          margin-left: 73px;
         }
       }
     }
@@ -67,10 +72,12 @@
         }
       }
     }
-    .user-area{
+
+    .user-area {
       transform: translateY(-6px);
     }
-    .basket{
+
+    .basket {
       transform: translateY(-4px);
     }
   }
@@ -85,7 +92,7 @@
 
   &__list-item {
     +.menu__list-item {
-      margin-left: 73px;
+      margin-left: 78px;
     }
   }
 

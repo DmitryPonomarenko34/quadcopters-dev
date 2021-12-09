@@ -14,7 +14,7 @@ body {
   flex-grow: 1;
 }
 
-.site-container{
+.site-container {
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -28,12 +28,73 @@ body {
   max-width: 1190px;
 }
 
-.title{
+.burger {
+  display: none;
+  position: relative;
+  width: 34px;
+  height: 17px;
+  cursor: pointer;
+
+  &__line,
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 10px;
+    background-color: $accent;
+    transition: transform ease 0.3s, opacity ease 0.3s;
+  }
+
+  &::after {
+    top: auto;
+    bottom: 0;
+  }
+
+  &__line {
+    top: 7px;
+  }
+
+  &--active {
+    .burger__line{
+      opacity: 0;
+      transition: opacity ease 0.3s;
+    }
+    &::before{
+      bottom: 0;
+      transform: rotate(-45deg);
+      transition: transform ease 0.3s;
+    }
+    &::after{
+      top: 0;
+      transform: rotate(45deg);
+      transition: transform ease 0.3s;
+    }
+  }
+}
+
+.title-main {
+  @extend %pragmatica-bold;
+  font-size: 72px;
+  line-height: 70px;
+  color: $default;
+
+  &--accent {
+    color: $bg;
+    display: block;
+  }
+}
+
+.title-second {
   @extend %astera-regular;
   font-size: 33px;
   line-height: 70px;
   color: $default;
-  &--accent{
+
+  &--accent {
     color: $bg;
+    display: block;
   }
 }
