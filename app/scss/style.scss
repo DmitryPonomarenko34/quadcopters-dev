@@ -305,6 +305,12 @@
       }
     }
   }
+
+  .slick-disabled {
+    opacity: 0.4;
+    cursor: default;
+    pointer-events: none;
+  }
 }
 
 .about {
@@ -419,9 +425,10 @@
 
   &__img {
     position: absolute;
-    right: 0;
-    bottom: -23px;
+    right: -94px;
+    bottom: -225px;
   }
+
 }
 
 .catalog {
@@ -451,6 +458,7 @@
     min-width: 350px;
     background: transparent;
     appearance: none;
+    cursor: pointer;
 
     &::-ms-expand {
       display: none;
@@ -471,7 +479,6 @@
     width: 32.333%;
     margin-bottom: 70px;
     min-height: 458px;
-    margin-right: 15px;
     border-top-left-radius: 45px;
     border-bottom-right-radius: 45px;
     display: flex;
@@ -479,10 +486,6 @@
     justify-content: center;
     z-index: 1;
     @extend %bg;
-
-    &:nth-child(3n) {
-      margin-right: 0;
-    }
 
     &::before {
       content: '';
@@ -547,6 +550,23 @@
       fill: $accent;
       width: 21px;
       height: 21px;
+    }
+  }
+
+  &__more {
+    position: relative;
+    @extend %link;
+    margin: 0 auto;
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 40px;
+      top: 15px;
+      height: 21px;
+      width: 19px;
+      background-image: url('../images/icons/multi/arrow-down.svg');
+      @extend %bg;
     }
   }
 }

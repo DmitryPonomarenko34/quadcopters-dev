@@ -1,5 +1,79 @@
 window.onload = function () {
 
+  let catalogBtn = document.querySelector('.catalog__more');
+
+  async function getProducts(catalogBtn) {
+    if (!catalogBtn.classList.contains('_hold')) {
+      catalogBtn.classList.add('_hold');
+      const file = "json/catalog.json";
+      let response = await fetch(file, {
+        method: "GET"
+      });
+      if (response.ok) {
+        let result = await response.json();
+        loadProducts(result);
+        catalogBtn.classList.remove('_hold');
+        catalogBtn.remove();
+      } else {
+        alert("error")
+      }
+    }
+
+    function loadProducts(date) {
+      const catalogItems = document.querySelector('.catalog__items');
+
+      date.catalog.forEach(item => {
+        const itemId = item.id;
+        const itemUrl = item.url;
+        const itemTitle = item.title;
+        const itemTitleAccent = item.titleAccent;
+        const itemImage = item.image;
+        const itemImageWebp = item.imageWebp;
+        const itemPrice = item.price;
+        const itemBg = item.bg;
+
+        let template = `
+        <a class="mix ezvizc6t catalog__item" href="${itemUrl}" style="background-image: url(images/content/catalog/${itemBg})" data-pid="${itemId}">
+        <div class="catalog__img-box">
+          <picture>
+            <source srcset="images/content/catalog/${itemImageWebp}" type="image/webp">
+            <img class="catalog__item-img" src="images/content/catalog/${itemImage}" alt="quadrocopter">
+          </picture>
+        </div>
+        <h3 class="catalog__item-title">
+        ${itemTitle} <span class="catalog__item-title--accent">${itemTitleAccent}</span>
+        </h3>
+        <span class="catalog__item-price">
+          ${itemPrice}
+        </span>
+        <button class="catalog__item-btn">
+          <svg>
+            <use xlink:href="images/icons/mono/spriteMono.svg#plus"></use>
+          </svg>
+        </button>
+      </a>
+        `;
+
+        catalogItems.insertAdjacentHTML('beforeend', template);
+      });
+    }
+  }
+
+  if (catalogBtn) {
+    catalogBtn.addEventListener('click', (e) => {
+      getProducts(catalogBtn);
+      e.preventDefault();
+    });
+  }
+
+
+  let containerEl = document.querySelector('.catalog__items');
+  let mixer = mixitup(containerEl);
+
+  $('.catalog__select').on('change', function () {
+    $('.catalog__select option:selected').trigger('click');
+  });
+
   $('.burger').on('click', function () {
     $(this).toggleClass('burger--active');
     $(this).next().toggleClass('menu__list--active');
@@ -22,7 +96,6 @@ window.onload = function () {
     fade: true,
     prevArrow: '<button type="button" class="slick-prev">Назад</button>',
     nextArrow: '<button type="button" class="slick-next">Вперед</button>',
-    // appendArrows: $('.first__arrows'),
     appendDots: '.slick-list',
   });
 

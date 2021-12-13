@@ -7,14 +7,15 @@
       <div class="catalog__box">
         <select class="catalog__select">
           <option class="catalog__option" data-filter="all">All</option>
-          <option class="catalog__option" data-filter="quadrocopters">Quadrocopters</option>
-          <option class="catalog__option" data-filter="gopro">Go Pro</option>
-          <option class="catalog__option" data-filter="EZVIZC6T">EZVIZ C6T</option>
+          <option class="catalog__option" data-filter=".quadrocopters">Quadrocopters</option>
+          <option class="catalog__option" data-filter=".gopro">Go Pro</option>
+          <option class="catalog__option" data-filter=".ezvizc6t">EZVIZ C6T</option>
         </select>
       </div>
     </div>
     <div class="catalog__items">
-      <a class="catalog__item" href="#" id="quadrocopters" style="background-image: url('images/content/catalog/bg-1.jpg')">
+      <a class="mix quadrocopters catalog__item" href="#" id="quadrocopters"
+        style="background-image: url('images/content/catalog/bg-1.jpg')" data-pid="1">
         <div class="catalog__img-box">
           <picture>
             <source srcset="images/content/catalog/01.webp" type="image/webp">
@@ -33,7 +34,7 @@
           </svg>
         </button>
       </a>
-      <a class="catalog__item" href="#" style="background-image: url('images/content/catalog/bg-2.jpg')">
+      <a class="mix gopro catalog__item" href="#" style="background-image: url('images/content/catalog/bg-2.jpg')">
         <div class="catalog__img-box">
           <picture>
             <source srcset="images/content/catalog/02.webp" type="image/webp">
@@ -52,7 +53,8 @@
           </svg>
         </button>
       </a>
-      <a class="catalog__item" href="#" id="quadrocopters" style="background-image: url('images/content/catalog/bg-3.jpg')">
+      <a class="mix catalog__item" href="#" id="quadrocopters"
+        style="background-image: url('images/content/catalog/bg-3.jpg')" data-pid="3">
         <div class="catalog__img-box">
           <picture>
             <source srcset="images/content/catalog/03.webp" type="image/webp">
@@ -71,7 +73,7 @@
           </svg>
         </button>
       </a>
-      <a class="catalog__item" href="#" style="background-image: url('images/content/catalog/bg-4.jpg')">
+      <a class="mix ezvizc6t catalog__item" href="#" style="background-image: url('images/content/catalog/bg-4.jpg')">
         <div class="catalog__img-box">
           <picture>
             <source srcset="images/content/catalog/04.webp" type="image/webp">
@@ -90,7 +92,8 @@
           </svg>
         </button>
       </a>
-      <a class="catalog__item" href="#" style="background-image: url('images/content/catalog/bg-1.jpg')">
+      <a class="mix quadrocopters catalog__item" href="#"
+        style="background-image: url('images/content/catalog/bg-1.jpg')">
         <div class="catalog__img-box">
           <picture>
             <source srcset="images/content/catalog/01.webp" type="image/webp">
@@ -109,7 +112,8 @@
           </svg>
         </button>
       </a>
-      <a class="catalog__item" href="#" id="quadrocopters" style="background-image: url('images/content/catalog/bg-2.jpg')">
+      <a class="mix gopro catalog__item" href="#" id="quadrocopters"
+        style="background-image: url('images/content/catalog/bg-2.jpg')">
         <div class="catalog__img-box">
           <picture>
             <source srcset="images/content/catalog/02.webp" type="image/webp">
@@ -121,120 +125,6 @@
         </h3>
         <span class="catalog__item-price">
           600 $
-        </span>
-        <button class="catalog__item-btn">
-          <svg>
-            <use xlink:href="images/icons/mono/spriteMono.svg#plus"></use>
-          </svg>
-        </button>
-      </a>
-      <a class="catalog__item" href="#" style="background-image: url('images/content/catalog/bg-3.jpg')">
-        <div class="catalog__img-box">
-          <picture>
-            <source srcset="images/content/catalog/03.webp" type="image/webp">
-            <img class="catalog__item-img" src="images/content/catalog/03.png" alt="quadrocopter">
-          </picture>
-        </div>
-        <h3 class="catalog__item-title">
-          go pro <span class="catalog__item-title--accent">hero2</span>
-        </h3>
-        <span class="catalog__item-price">
-          750 $
-        </span>
-        <button class="catalog__item-btn">
-          <svg>
-            <use xlink:href="images/icons/mono/spriteMono.svg#plus"></use>
-          </svg>
-        </button>
-      </a>
-      <a class="catalog__item" href="#" style="background-image: url('images/content/catalog/bg-4.jpg')">
-        <div class="catalog__img-box">
-          <picture>
-            <source srcset="images/content/catalog/04.webp" type="image/webp">
-            <img class="catalog__item-img" src="images/content/catalog/04.png" alt="quadrocopter">
-          </picture>
-        </div>
-        <h3 class="catalog__item-title">
-          EZVIZ <span class="catalog__item-title--accent">C6T</span>
-        </h3>
-        <span class="catalog__item-price">
-          300 $
-        </span>
-        <button class="catalog__item-btn">
-          <svg>
-            <use xlink:href="images/icons/mono/spriteMono.svg#plus"></use>
-          </svg>
-        </button>
-      </a>
-      <a class="catalog__item" href="#" style="background-image: url('images/content/catalog/bg-1.jpg')">
-        <div class="catalog__img-box">
-          <picture>
-            <source srcset="images/content/catalog/01.webp" type="image/webp">
-            <img class="catalog__item-img" src="images/content/catalog/01.png" alt="quadrocopter">
-          </picture>
-        </div>
-        <h3 class="catalog__item-title">
-          Inspire 2 <span class="catalog__item-title--accent">quadcopter</span>
-        </h3>
-        <span class="catalog__item-price">
-          1500 $
-        </span>
-        <button class="catalog__item-btn">
-          <svg>
-            <use xlink:href="images/icons/mono/spriteMono.svg#plus"></use>
-          </svg>
-        </button>
-      </a>
-      <a class="catalog__item" href="#" style="background-image: url('images/content/catalog/bg-2.jpg')">
-        <div class="catalog__img-box">
-          <picture>
-            <source srcset="images/content/catalog/02.webp" type="image/webp">
-            <img class="catalog__item-img" src="images/content/catalog/02.png" alt="quadrocopter">
-          </picture>
-        </div>
-        <h3 class="catalog__item-title">
-          go pro <span class="catalog__item-title--accent">hero2</span>
-        </h3>
-        <span class="catalog__item-price">
-          600 $
-        </span>
-        <button class="catalog__item-btn">
-          <svg>
-            <use xlink:href="images/icons/mono/spriteMono.svg#plus"></use>
-          </svg>
-        </button>
-      </a>
-      <a class="catalog__item" href="#" style="background-image: url('images/content/catalog/bg-3.jpg')">
-        <div class="catalog__img-box">
-          <picture>
-            <source srcset="images/content/catalog/03.webp" type="image/webp">
-            <img class="catalog__item-img" src="images/content/catalog/03.png" alt="quadrocopter">
-          </picture>
-        </div>
-        <h3 class="catalog__item-title">
-          go pro <span class="catalog__item-title--accent">hero2</span>
-        </h3>
-        <span class="catalog__item-price">
-          750 $
-        </span>
-        <button class="catalog__item-btn">
-          <svg>
-            <use xlink:href="images/icons/mono/spriteMono.svg#plus"></use>
-          </svg>
-        </button>
-      </a>
-      <a class="catalog__item" href="#" style="background-image: url('images/content/catalog/bg-4.jpg')">
-        <div class="catalog__img-box">
-          <picture>
-            <source srcset="images/content/catalog/04.webp" type="image/webp">
-            <img class="catalog__item-img" src="images/content/catalog/04.png" alt="quadrocopter">
-          </picture>
-        </div>
-        <h3 class="catalog__item-title">
-          EZVIZ <span class="catalog__item-title--accent">C6T</span>
-        </h3>
-        <span class="catalog__item-price">
-          300 $
         </span>
         <button class="catalog__item-btn">
           <svg>
@@ -243,5 +133,8 @@
         </button>
       </a>
     </div>
+    <a class="catalog__more" href="#">
+      Show more
+    </a>
   </div>
 </section>
