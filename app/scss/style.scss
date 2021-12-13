@@ -616,6 +616,7 @@
   &__title {
     position: relative;
     font-size: 24px;
+    line-height: 23px;
     @extend %montserrat-semiBold;
     cursor: pointer;
 
@@ -639,6 +640,7 @@
       height: 20px;
       width: 6px;
       right: 7px;
+      top: 0;
     }
 
     &--open {

@@ -78,6 +78,7 @@ window.onload = function () {
     $(this).toggleClass('burger--active');
     $(this).next().toggleClass('menu__list--active');
     $('.header').toggleClass('header--bg');
+    $('body').toggleClass('body--lock');
   });
 
   if ($(window).width() <= 1440) {

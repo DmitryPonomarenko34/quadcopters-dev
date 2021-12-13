@@ -28,6 +28,10 @@ body {
   max-width: 1190px;
 }
 
+.body--lock{
+  overflow-y: hidden;
+}
+
 .burger {
   display: none;
   position: relative;

@@ -322,6 +322,25 @@
   }
 }
 
+@include laptop-L {
+  .catalog {
+    &__info {
+      margin-bottom: 70px;
+    }
+
+    &__item {
+      width: 30.333%;
+      min-height: 329px;
+      margin-bottom: 38px;
+    }
+
+    &__item-btn {
+      width: 57px;
+      height: 57px;
+    }
+  }
+}
+
 @include laptop {
   body {
     line-height: 13px;
@@ -603,7 +622,51 @@
   }
 
   .catalog {
-    padding-top: 107px;
+    padding-top: 129px;
+
+    &__container {
+      max-width: 618px;
+    }
+
+    &__box {
+      background-position: 86% center;
+      background-size: 16px;
+    }
+
+    &__select {
+      width: 211px;
+      min-width: auto;
+      height: 38px;
+    }
+
+    &__info {
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 75px;
+    }
+
+    &__item {
+      width: 45.5%;
+      padding-bottom: 23px;
+    }
+
+    &__item-img {
+      height: 133px;
+    }
+
+    &__item-title {
+      font-size: 8px;
+      margin-bottom: 26px;
+    }
+
+    &__item-price {
+      font-size: 18px;
+    }
+
+    &__item-btn {
+      right: 2px;
+      bottom: -14px;
+    }
   }
 }
 
@@ -794,7 +857,7 @@
 
 @include portrait-phones {
   .about {
-    padding: 48px 0;
+    padding: 48px 0 0;
 
     &__decor-title {
       left: 15px;
@@ -835,9 +898,33 @@
     &__img {
       position: static;
       transform: translateX(0);
-      transform: translateY(-14px);
+      transform: translateY(-7px);
       width: 284px;
+      height: 262px;
       margin: 0 auto;
+    }
+  }
+
+  .catalog {
+    padding-top: 0;
+    &__item {
+      width: 97%;
+      margin-bottom: 48px;
+    }
+
+    &__info {
+      display: block;
+      margin-bottom: 30px;
+    }
+
+    &__box {
+      width: 211px;
+      margin: 0 auto;
+    }
+
+    &__title {
+      margin-right: 0;
+      margin-bottom: 17px;
     }
   }
 }
