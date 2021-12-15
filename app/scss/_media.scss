@@ -668,6 +668,68 @@
       bottom: -14px;
     }
   }
+
+  .faq {
+    padding-top: 12px;
+    padding-bottom: 64px;
+    background-position: 126% 98%;
+    background-size: 61%;
+
+    &__title {
+      margin-bottom: 84px;
+    }
+
+    &__accardeon {
+      margin-bottom: 84px;
+    }
+
+    &__img {
+      max-width: 388px;
+      transform: translate(-21%, 0);
+    }
+  }
+
+  .accardeon {
+    &__item {
+      max-width: 701px;
+
+      &:not(:last-child) {
+        margin-bottom: 19px;
+      }
+    }
+
+    &__content {
+      margin: 29px 0 22px;
+    }
+
+    &__title {
+      font-size: 12px;
+    }
+
+    &__text {
+      max-width: 600px;
+    }
+  }
+
+  .footer {
+    padding: 64px 0 87px;
+
+    &__logo {
+      margin-bottom: 79px;
+    }
+
+    &__logo-img {
+      max-width: 167px;
+    }
+
+    &__list {
+      margin-bottom: 83px;
+    }
+
+    &__items {
+      margin-bottom: 79px;
+    }
+  }
 }
 
 @media (max-width: 700px) {
@@ -853,6 +915,36 @@
       width: 284px;
     }
   }
+
+  .footer {
+    padding: 30px 0;
+
+    &__logo {
+      margin-bottom: 27px;
+    }
+
+    &__logo-img {
+      max-width: 67px;
+    }
+
+    &__list {
+      margin-bottom: 32px;
+    }
+
+    &__items {
+      margin-bottom: 27px;
+    }
+
+    &__list-item {
+      +.footer__list-item {
+        margin-left: 24px;
+      }
+    }
+
+    &__items-link {
+      font-size: 12px;
+    }
+  }
 }
 
 @include portrait-phones {
@@ -907,6 +999,8 @@
 
   .catalog {
     padding-top: 0;
+    padding-bottom: 20px;
+
     &__item {
       width: 97%;
       margin-bottom: 48px;
@@ -926,5 +1020,51 @@
       margin-right: 0;
       margin-bottom: 17px;
     }
+  }
+
+  .accardeon {
+    &__item {
+      padding: 6px 14px;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &__title {
+      padding-right: 40px;
+      line-height: 16px;
+
+      &::after {
+        right: 11px;
+        top: 0;
+      }
+
+      &::before {
+        top: 7px;
+        right: 4px;
+      }
+    }
+
+    &__content {
+      margin: 16px 0 22px;
+    }
+  }
+
+  .faq {
+    background-image: none;
+    padding-bottom: 59px;
+
+    &__accardeon {
+      margin-bottom: 49px;
+    }
+
+    &__img {
+      max-width: 339px;
+    }
+  }
+
+  .footer {
+    padding: 27px 0 39px;
   }
 }
