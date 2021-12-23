@@ -68,7 +68,9 @@ window.onload = function () {
 
 
   let containerEl = document.querySelector('.catalog__items');
-  let mixer = mixitup(containerEl);
+  if (containerEl) {
+    let mixer = mixitup(containerEl);
+  }
 
   $('.catalog__select').on('change', function () {
     $('.catalog__select option:selected').trigger('click');

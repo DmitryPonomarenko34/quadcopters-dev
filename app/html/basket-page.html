@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/basket-page.min.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="site-container">
+    <header class="header header--second">
+      <div class="header__container container">
+        <div class="header__inner">
+          <a class="logo header__logo" href="#">
+            <img src="images/content/logo.svg" alt="logotype">
+          </a>
+          <nav class="menu">
+            <div class="burger">
+              <span class="burger__line"></span>
+            </div>
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">
+                  Home
+                </a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">
+                  About Us
+                </a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">
+                  Catalog
+                </a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">
+                  FAQ
+                </a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">
+                  Сontacts
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="user-action">
+            <a class="user-action__link user-area" href="#">
+              <svg>
+                <use xlink:href="images/icons/mono/spriteMono.svg#user"></use>
+              </svg>
+            </a>
+            <a class="user-action__link basket" href="#">
+              <span class="basket__num">1</span>
+              <svg>
+                <use xlink:href="images/icons/mono/spriteMono.svg#basket"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="basket-page">
+        <div class="container">
+          <h1 class="title-main basket-page__title">
+            Bas<span class="title-main--accent">ket</span>
+          </h1>
+          <div class="basket-page__inner">
+            <a class="item-catalog basket-page__item" href="#"
+              style="background-image: url('images/content/catalog/bg-1.jpg')">
+              <div class="item-catalog__img-box">
+                <picture>
+                  <source srcset="images/content/catalog/01.webp" type="image/webp">
+                  <img class="item-catalog__item-img" src="images/content/catalog/01.png" alt="quadrocopter">
+                </picture>
+              </div>
+              <h3 class="item-catalog__item-title">
+                Inspire 2 <span class="item-catalog__item-title--accent">quadcopter</span>
+              </h3>
+              <span class="item-catalog__item-price">
+                1500 $
+              </span>
+              <button class="item-catalog__item-btn basket-page__item-btn">
+                <svg>
+                  <use xlink:href="images/icons/multi/spriteMulti.svg#remove"></use>
+                </svg>
+              </button>
+            </a>
+            <a class="item-catalog basket-page__item" href="#"
+              style="background-image: url('images/content/catalog/bg-1.jpg')">
+              <div class="item-catalog__img-box">
+                <picture>
+                  <source srcset="images/content/catalog/01.webp" type="image/webp">
+                  <img class="item-catalog__item-img" src="images/content/catalog/01.png" alt="quadrocopter">
+                </picture>
+              </div>
+              <h3 class="item-catalog__item-title">
+                Inspire 2 <span class="item-catalog__item-title--accent">quadcopter</span>
+              </h3>
+              <span class="item-catalog__item-price">
+                1500 $
+              </span>
+              <button class="item-catalog__item-btn basket-page__item-btn">
+                <svg>
+                  <use xlink:href="images/icons/multi/spriteMulti.svg#remove"></use>
+                </svg>
+              </button>
+            </a>
+          </div>
+          <div class="basket-page__items">
+            <p class="basket-page__quantity">
+              2 items worth:
+            </p>
+            <span class="basket-page__price">
+              2 250 $
+            </span>
+          </div>
+          <a class="basket-page__link" href="#">
+            Buy now
+          </a>
+        </div>
+      </section>
+    </main>
+    @@include('components/_footer.html')
+  </div>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

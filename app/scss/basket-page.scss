@@ -1,0 +1,61 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+@import 'components/header';
+@import 'components/footer';
+
+.basket-page {
+  padding: 97px 0 511px;
+
+  &__title {
+    margin-bottom: 97px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 123px;
+    grid-gap: 30px;
+  }
+
+  &__item {
+    width: 100%;
+  }
+
+  &__item-btn {
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    margin-bottom: 105px;
+  }
+
+  &__quantity,
+  &__price {
+    font-size: 36px;
+  }
+
+  &__quantity {
+    @extend %pragmatica-book;
+    margin-right: 95px;
+
+  }
+
+  &__price {
+    @extend %pragmatica-bold;
+    color: $bg;
+    text-decoration: underline;
+  }
+
+  &__link {
+    @extend %link;
+  }
+}
+
+@import 'media';
