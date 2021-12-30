@@ -123,11 +123,16 @@
   height: 44px;
   background-color: $accent;
 
+  &__text {
+    
+  }
+
   svg {
     width: 27px;
     height: 27px;
     fill: $bg;
   }
+
 }
 
 .basket {
