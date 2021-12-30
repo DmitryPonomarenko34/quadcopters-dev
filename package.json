@@ -13,6 +13,7 @@
     "@babel/plugin-transform-regenerator": "^7.16.0",
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.15.6",
+    "@fancyapps/fancybox": "^3.5.7",
     "browser-sync": "^2.26.13",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
@@ -30,6 +31,7 @@
     "imagemin-pngquant": "^9.0.2",
     "imagemin-webp": "^6.0.0",
     "jquery": "^3.5.1",
+    "malihu-custom-scrollbar-plugin": "^3.1.5",
     "mixitup": "^3.3.1",
     "slick-carousel": "^1.8.1",
     "svgxuse": "^1.2.6"

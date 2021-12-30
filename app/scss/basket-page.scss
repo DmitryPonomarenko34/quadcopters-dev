@@ -1,7 +1,8 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
-@import 'libs';
+@import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox';
+@import '../../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar';
 @import 'global';
 @import 'components/header';
 @import 'components/footer';
@@ -57,5 +58,165 @@
     @extend %link;
   }
 }
+
+.product-form {
+  border: 1px solid $default;
+  border-radius: 30px;
+  padding: 52px 38px;
+  cursor: default;
+
+  &__wrapper {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    padding: 13px 34px;
+    background-color: $accent;
+    box-shadow: 0px 50px 80px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    z-index: 11;
+    cursor: default;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__box-img {
+    max-width: 247px;
+  }
+
+  &__box-text {
+    color: #dAdAdA;
+    font-size: 48px;
+    @extend %montserrat-bold;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 90px;
+  }
+
+  &__inputs {
+    max-width: 335px;
+    margin-right: 40px;
+  }
+
+  &__input {
+    width: 100%;
+    height: 32px;
+    padding: 8px 14px;
+    border: none;
+    background-color: #f6f6f6;
+
+    &:not(:last-child) {
+      margin-bottom: 9px;
+    }
+
+    &::placeholder {
+      color: #444;
+      font-size: 18px;
+      font-family: inherit;
+    }
+
+    &--long {
+      height: 72px;
+    }
+  }
+
+  &__info {
+    max-width: 488px;
+    column-count: 2;
+    column-gap: 6px;
+  }
+
+  &__info-item {
+    @extend .product-form__input;
+    text-align: center;
+    display: block;
+    background-color: #f6f6f6;
+
+    &:nth-child(-n+3) {
+      background-color: #d9effa;
+    }
+  }
+
+  &__table {
+    width: 100%;
+    border-spacing: 0 20px;
+
+    td {
+      @extend %montserrat-bold;
+      color: #444;
+    }
+
+    tbody {
+      &:not(:last-child) {
+        &::after {
+          content: '';
+          display: block;
+          height: 59px;
+        }
+      }
+
+      &:not(:first-child) {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: block;
+          height: 1px;
+          width: 100%;
+          background-color: #c0c0c0;
+        }
+      }
+    }
+  }
+
+  &__table-title {}
+
+  &__table-title__text {
+    font-weight: 400;
+    background-color: #d9effa;
+    padding: 8px 10px;
+
+    &:first-child {
+      text-align: start;
+    }
+  }
+
+  &__table-text {
+    font-weight: 400;
+    background-color: transparent;
+    text-align: start;
+  }
+
+  &__table-value {}
+
+  &__table-value__text {
+    &:not(:first-child) {
+      text-align: center;
+    }
+  }
+
+  &__btn {
+    margin-top: 48px;
+    @extend %link;
+  }
+
+  .mCSB_dragger{
+    display: none;
+  }
+}
+
 
 @import 'media';

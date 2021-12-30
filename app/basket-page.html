@@ -121,7 +121,7 @@
               2 250 $
             </span>
           </div>
-          <a class="basket-page__link" href="#">
+          <a class="basket-page__link" data-fancybox href="#product-popup">
             Buy now
           </a>
         </div>
@@ -175,7 +175,89 @@
   </div>
 </footer>
   </div>
-
+  <div class="product-form__wrapper" id="product-popup">
+    <form class="product-form" action="#">
+      <div class="product-form__box">
+        <picture>
+          <source srcset="images/content/paypal.webp" type="image/webp">
+          <img class="product-form__box-img" src="images/content/paypal.png" alt="paypal">
+        </picture>
+        <p class="product-form__box-text">
+          An invoice for payment
+        </p>
+      </div>
+      <div class="product-form__inner">
+        <div class="product-form__inputs">
+          <input class="product-form__input" type="text" placeholder="Name">
+          <input class="product-form__input product-form__input--long" type="text" placeholder="Adress">
+          <input class="product-form__input" type="tel" placeholder="Number">
+          <input class="product-form__input" type="email" placeholder="Email">
+        </div>
+        <div class="product-form__info">
+          <span class="product-form__info-item">
+            Account number
+          </span>
+          <span class="product-form__info-item">
+            Date of invoice
+          </span>
+          <span class="product-form__info-item">
+            Due date
+          </span>
+          <span class="product-form__info-item">
+            001
+          </span>
+          <span class="product-form__info-item">
+            31.10.2020
+          </span>
+          <span class="product-form__info-item">
+            31.10.2020
+          </span>
+        </div>
+      </div>
+      <table class="product-form__table">
+        <tbody class="product-form__table-item">
+          <tr class="product-form__table-title">
+            <th class="product-form__table-title__text">Description</th>
+            <th class="product-form__table-title__text">Quantity</th>
+            <th class="product-form__table-title__text">Unit price</th>
+            <th class="product-form__table-title__text">Sum</th>
+          </tr>
+          <tr class="product-form__table-value">
+            <td class="product-form__table-value__text">Inspire to quactocopter</td>
+            <td class="product-form__table-value__text">1</td>
+            <td class="product-form__table-value__text">1500$</td>
+            <td class="product-form__table-value__text">1500$</td>
+          </tr>
+          <tr class="product-form__table-value">
+            <td class="product-form__table-value__text">GoPro</td>
+            <td class="product-form__table-value__text">1</td>
+            <td class="product-form__table-value__text">750$</td>
+            <td class="product-form__table-value__text">750$</td>
+          </tr>
+        </tbody>
+        <tbody class="product-form__table-item">
+          <tr class="product-form__table-title">
+            <td class="product-form__table-value__text">Buyer Note</td>
+            <td class="product-form__table-value__text">Total</td>
+            <td class="product-form__table-value__text"></td>
+            <td class="product-form__table-value__text">$2250</td>
+          </tr>
+          <tr class="product-form__table-value">
+            <th class="product-form__table-text">Thank you for your purchase</th>
+          </tr>
+          <tr class="product-form__table-title">
+            <th class="product-form__table-title__text"></th>
+            <th class="product-form__table-title__text">Total</th>
+            <th class="product-form__table-title__text"></th>
+            <th class="product-form__table-title__text">$2250</th>
+          </tr>
+        </tbody>
+      </table>
+      <button class="product-form__btn" type="submit">
+        Buy now
+      </button>
+    </form>
+  </div>
   <script src="js/main.min.js"></script>
 </body>
 

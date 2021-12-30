@@ -81,8 +81,10 @@ $bg: #19B2E2;
   background-position: 100%;
   border-radius: 20px;
   z-index: 1;
+  border: none;
   border-top-right-radius: 0;
   overflow-x: hidden;
+  cursor: pointer;
 
   &::after {
     content: '';
@@ -132,4 +134,12 @@ $bg: #19B2E2;
   @media (max-width: 425px) {
     @content;
   }
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
 }
