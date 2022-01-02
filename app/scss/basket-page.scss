@@ -2,7 +2,6 @@
 @import 'fonts';
 @import 'reset';
 @import '../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox';
-@import '../../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar';
 @import 'global';
 @import 'components/header';
 @import 'components/footer';
@@ -94,6 +93,7 @@
   &__box-text {
     color: #dAdAdA;
     font-size: 48px;
+    line-height: 1;
     @extend %montserrat-bold;
   }
 
@@ -106,6 +106,7 @@
   &__inputs {
     max-width: 335px;
     margin-right: 40px;
+    flex-shrink: 1;
   }
 
   &__input {
@@ -134,6 +135,7 @@
     max-width: 488px;
     column-count: 2;
     column-gap: 6px;
+    flex-shrink: 0;
   }
 
   &__info-item {
