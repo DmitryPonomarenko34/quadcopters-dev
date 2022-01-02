@@ -28,6 +28,7 @@
     "gulp-svg-sprite": "^1.5.0",
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
+    "gulp-webp-css": "^1.1.0",
     "imagemin-pngquant": "^9.0.2",
     "imagemin-webp": "^6.0.0",
     "jquery": "^3.5.1",

@@ -6,6 +6,7 @@ const {
   series,
 } = require('gulp');
 const scss = require('gulp-sass');
+const webpCss = require('gulp-webp-css');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
@@ -34,6 +35,7 @@ function styles() {
     .pipe(scss({
       outputStyle: 'compressed'
     }))
+    .pipe(webpCss(['.jpg','.jpeg', '.png', !'.svg']))
     .pipe(rename({
       suffix: ".min"
     }))
@@ -51,7 +53,6 @@ function scripts() {
       'node_modules/@babel/polyfill/dist/polyfill.js',
       'node_modules/slick-carousel/slick/slick.js',
       'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
-      'node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js',
       'node_modules/mixitup/dist/mixitup.js',
       'node_modules/svgxuse/svgxuse.js',
       'app/js/main.js'

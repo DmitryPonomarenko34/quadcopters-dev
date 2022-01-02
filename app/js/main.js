@@ -33,20 +33,20 @@ window.onload = function () {
         const itemBg = item.bg;
 
         let template = `
-        <a class="mix ezvizc6t catalog__item" href="${itemUrl}" style="background-image: url(images/content/catalog/${itemBg})" data-pid="${itemId}">
-        <div class="catalog__img-box">
+        <a class="mix ezvizc6t catalog__item item-catalog" href="${itemUrl}" style="background-image: url(images/content/catalog/${itemBg})" data-pid="${itemId}">
+        <div class="item-catalog__img-box">
           <picture>
             <source srcset="images/content/catalog/${itemImageWebp}" type="image/webp">
-            <img class="catalog__item-img" src="images/content/catalog/${itemImage}" alt="quadrocopter">
+            <img class="item-catalog__item-img" src="images/content/catalog/${itemImage}" alt="quadrocopter">
           </picture>
         </div>
-        <h3 class="catalog__item-title">
-        ${itemTitle} <span class="catalog__item-title--accent">${itemTitleAccent}</span>
+        <h3 class="item-catalog__item-title">
+        ${itemTitle} <span class="item-catalog__item-title--accent">${itemTitleAccent}</span>
         </h3>
-        <span class="catalog__item-price">
+        <span class="item-catalog__item-price">
           ${itemPrice}
         </span>
-        <button class="catalog__item-btn">
+        <button class="item-catalog__item-btn">
           <svg>
             <use xlink:href="images/icons/mono/spriteMono.svg#plus"></use>
           </svg>
@@ -131,7 +131,7 @@ window.onload = function () {
     slidesToScroll: 1,
     asNavFor: '.slider-product__for',
     dots: false,
-    centerMode: true,
+    centerMode: false,
     focusOnSelect: true
   });
 }
