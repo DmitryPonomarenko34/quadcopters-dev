@@ -1,33 +1,54 @@
 <header class="header">
-  <div class="container">
+  <div class="header__container container">
     <div class="header__inner">
       <a class="logo header__logo" href="#">
-        <img src="images/logo.png" alt="logotype">
+        <img src="images/content/logo.svg" alt="logotype">
       </a>
       <nav class="menu">
+        <div class="burger">
+          <span class="burger__line"></span>
+        </div>
         <ul class="menu__list">
           <li class="menu__list-item">
-            <a class="menu__list-link">
-              item
+            <a class="menu__list-link" href="#">
+              Home
             </a>
           </li>
           <li class="menu__list-item">
-            <a class="menu__list-link">
-              item
+            <a class="menu__list-link" href="#">
+              About Us
             </a>
           </li>
           <li class="menu__list-item">
-            <a class="menu__list-link">
-              item
+            <a class="menu__list-link" href="#">
+              Catalog
             </a>
           </li>
           <li class="menu__list-item">
-            <a class="menu__list-link">
-              item
+            <a class="menu__list-link" href="#">
+              FAQ
+            </a>
+          </li>
+          <li class="menu__list-item">
+            <a class="menu__list-link" href="#">
+              Сontacts
             </a>
           </li>
         </ul>
       </nav>
+      <div class="user-action">
+        <a class="user-action__link user-area" href="#">
+          <svg>
+            <use xlink:href="images/icons/mono/spriteMono.svg#user"></use>
+          </svg>
+        </a>
+        <a class="user-action__link basket" href="#">
+          <span class="basket__num">1</span>
+          <svg>
+            <use xlink:href="images/icons/mono/spriteMono.svg#basket"></use>
+          </svg>
+        </a>
+      </div>
     </div>
   </div>
 </header>

@@ -1,0 +1,51 @@
+.footer {
+  padding: 87px 0 112px;
+  background-color: #101010;
+
+  &__container {
+    max-width: 636px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 73px;
+  }
+
+  &__list-item {
+    +.footer__list-item {
+      margin-left: 66px;
+    }
+  }
+
+  &__list-link {
+    @extend %montserrat-light;
+    color: $accent;
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 46px;
+  }
+
+  &__logo-img {
+    margin: 0 auto;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 74px;
+  }
+
+  &__items-link {
+    color: $bg;
+    font-size: 24px;
+    @extend %montserrat-semiBold;
+  }
+
+  &__copy {
+    text-align: center;
+    @extend .footer__items-link;
+  }
+}

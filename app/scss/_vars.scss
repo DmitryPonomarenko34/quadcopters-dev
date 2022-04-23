@@ -6,18 +6,22 @@ $bg: #19B2E2;
   font-family: "Montserrat-Light", sans-serif;
   font-weight: 300;
 }
+
 %montserrat-regular {
   font-family: "Montserrat-Regular", sans-serif;
   font-weight: 400;
 }
+
 %montserrat-medium {
   font-family: "Montserrat-Medium", sans-serif;
   font-weight: 500;
 }
+
 %montserrat-semiBold {
   font-family: "Montserrat-SemiBold", sans-serif;
   font-weight: 600;
 }
+
 %montserrat-bold {
   font-family: "Montserrat-Bold", sans-serif;
   font-weight: 700;
@@ -27,10 +31,12 @@ $bg: #19B2E2;
   font-family: "PragmaticaExtended-ExtraLight", sans-serif;
   font-weight: 200;
 }
+
 %pragmatica-book {
   font-family: "PragmaticaExtended-Book", sans-serif;
   font-weight: 400;
 }
+
 %pragmatica-bold {
   font-family: "PragmaticaExtended-Bold", sans-serif;
   font-weight: 700;
@@ -40,6 +46,7 @@ $bg: #19B2E2;
   font-family: "GothamPro-Light", sans-serif;
   font-weight: 300;
 }
+
 %gothampro-medium {
   font-family: "GothamPro-Medium", sans-serif;
   font-weight: 500;
@@ -55,28 +62,84 @@ $bg: #19B2E2;
   font-weight: 400;
 }
 
-
 %bg {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+%link {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 261px;
+  @extend %montserrat-bold;
+  color: $accent;
+  text-align: center;
+  padding: 17px 17px 19px 0;
+  background-color: $bg;
+  background-position: 100%;
+  border-radius: 20px;
+  z-index: 1;
+  border: none;
+  border-top-right-radius: 0;
+  overflow-x: hidden;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    left: 0;
+    top: 0;
+    background-color: $default;
+    height: 100%;
+    z-index: -1;
+    width: 0;
+  }
+}
+
 @mixin laptop-L {
-  @media (max-width: 1200px) { @content; }
+  @media (max-width: 1200px) {
+    @content;
+  }
 }
+
 @mixin laptop {
-  @media (max-width: 992px) { @content; }
+  @media (max-width: 992px) {
+    @content;
+  }
 }
+
 @mixin tablet-L {
-  @media (max-width: 768px) { @content; }
+  @media (max-width: 768px) {
+    @content;
+  }
 }
+
 @mixin tablet {
-  @media (max-width: 630px) { @content; }
+  @media (max-width: 630px) {
+    @content;
+  }
 }
+
 @mixin portrait-phones {
-  @media (max-width: 530px) { @content; }
+  @media (max-width: 530px) {
+    @content;
+  }
 }
+
 @mixin mobile-L {
-  @media (max-width: 425px) { @content; }
-};
+  @media (max-width: 425px) {
+    @content;
+  }
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}

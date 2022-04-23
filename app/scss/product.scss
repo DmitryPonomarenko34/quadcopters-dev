@@ -1,0 +1,138 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+@import 'components/header';
+@import 'components/footer';
+
+.product {
+  padding-top: 104px;
+
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 80px;
+  }
+
+  &__box {
+    margin-bottom: 211px;
+  }
+
+  &__inner {
+    display: flex;
+    margin-bottom: 119px;
+  }
+
+  &__slider {
+    min-width: 0;
+    transform: translate(-60px, 10px);
+  }
+
+  &__slider-nav {}
+
+  &__info {
+    width: 100%;
+    max-width: 570px;
+  }
+
+  &__info-title {
+    display: inline-block;
+    margin-bottom: 59px;
+    font-size: 36px;
+    @extend %pragmatica-extraLight;
+  }
+
+  &__info-item {
+    display: flex;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      margin-bottom: 31px;
+    }
+  }
+
+  &__info-property {
+    max-width: 119px;
+    margin-right: 20px;
+    @extend %pragmatica-bold;
+    color: $bg;
+  }
+
+  &__info-caption {
+    width: 100%;
+    max-width: 356px;
+    display: block;
+    margin-right: 16px;
+    @extend %pragmatica-book;
+  }
+
+  &__link {
+    margin-left: 15px;
+    @extend %link;
+  }
+
+  &__decor {
+    max-width: 55%;
+    margin-left: auto;
+    margin-right: -175px;
+  }
+}
+
+.slider-product {
+  &__for {
+    .slick-arrow {
+      position: absolute;
+      z-index: 5;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -45px;
+      background-color: transparent;
+      font-size: 0;
+      padding: 0;
+      border: none;
+      cursor: pointer;
+    }
+
+    .slick-prev {
+      left: -51px;
+    }
+  }
+
+  &__for-img {
+    max-width: 590px;
+  }
+
+  &__for-item {
+    border: 1px solid rgba(17, 16, 16, 0.43);
+    border-radius: 10px;
+    margin-bottom: 27px;
+    height: 316px;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__nav {
+    .slick-slide {
+      &:nth-child(2n) {
+        img {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  &__nav-item {
+    cursor: pointer;
+
+    img {
+      border: 1px solid rgba(81, 81, 81, 0.43);
+      border-radius: 10px;
+      width: 222px;
+      height: 118px;
+      object-fit: contain;
+    }
+  }
+}
+
+@import 'media';

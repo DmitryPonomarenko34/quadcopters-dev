@@ -6,6 +6,7 @@ const {
   series,
 } = require('gulp');
 const scss = require('gulp-sass');
+const webpCss = require('gulp-webp-css');
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
@@ -34,7 +35,10 @@ function styles() {
     .pipe(scss({
       outputStyle: 'compressed'
     }))
-    .pipe(concat('style.min.css'))
+    .pipe(webpCss(['.jpg','.jpeg', '.png', !'.svg']))
+    .pipe(rename({
+      suffix: ".min"
+    }))
     .pipe(autoprefixer({
       overrideBrowserslist: ['last 10 version'],
       grid: true
@@ -45,11 +49,17 @@ function styles() {
 
 function scripts() {
   return src([
+      'node_modules/jquery/dist/jquery.js',
+      'node_modules/@babel/polyfill/dist/polyfill.js',
+      'node_modules/slick-carousel/slick/slick.js',
+      'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js',
+      'node_modules/mixitup/dist/mixitup.js',
       'node_modules/svgxuse/svgxuse.js',
       'app/js/main.js'
     ])
     .pipe(babel({
-      presets: ['@babel/env']
+      presets: ['@babel/preset-env'],
+      plugins: ['@babel/plugin-transform-regenerator']
     }))
     .pipe(concat('main.min.js'))
     .pipe(uglify())

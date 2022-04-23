@@ -1,0 +1,166 @@
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  padding: 38px 15px 88px;
+  overflow-x: hidden;
+
+  &__container {
+    position: relative;
+    max-width: 1180px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      border-bottom: 1px solid rgba(134, 134, 134, 0.9);
+      width: 300%;
+      left: -34px;
+      bottom: 0;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 48px;
+  }
+
+  &__logo {
+    transform: translateY(-10px);
+  }
+
+  &--second {
+    position: relative;
+    padding: 50px 0 70px;
+    background-color: #0f1c30;
+
+    .header {
+      &__container {
+        &::before {
+          display: none;
+        }
+      }
+
+      &__inner {
+        padding-bottom: 0;
+      }
+
+      &__logo {
+        transform: translate(14px, 5px);
+      }
+    }
+
+    .menu {
+      margin-left: 6%;
+
+      &__list-item {
+        +.menu__list-item {
+          margin-left: 73px;
+        }
+      }
+    }
+
+    .user-action {
+      margin-right: 3.6%;
+
+      &__link {
+        +.user-action__link {
+          margin-left: 45px;
+        }
+      }
+    }
+
+    .user-area {
+      transform: translateY(-6px);
+    }
+
+    .basket {
+      transform: translateY(-4px);
+    }
+  }
+}
+
+.menu {
+  margin-left: 7%;
+
+  &__list {
+    display: flex;
+  }
+
+  &__list-item {
+    +.menu__list-item {
+      margin-left: 78px;
+    }
+  }
+
+  &__list-link {
+    color: $accent;
+    @extend %montserrat-light;
+  }
+}
+
+.user-action {
+  margin-right: 4%;
+
+  &__link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    +.user-action__link {
+      margin-left: 41px;
+    }
+  }
+}
+
+.user-area {
+  transform: translateY(-3px);
+  width: 44px;
+  border-radius: 50%;
+  height: 44px;
+  background-color: $accent;
+
+  &__text {
+    
+  }
+
+  svg {
+    width: 27px;
+    height: 27px;
+    fill: $bg;
+  }
+
+}
+
+.basket {
+  position: relative;
+  border-radius: 20px;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(313.2deg, #19B2E2 16.89%, #D7ECF3 116.37%);
+  box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.6);
+
+  svg {
+    width: 30px;
+    height: 30px;
+    fill: $default;
+  }
+
+  &__num {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    color: #000;
+    @extend %montserrat-medium;
+    background-color: $accent;
+    right: -19px;
+    top: -15px;
+  }
+}

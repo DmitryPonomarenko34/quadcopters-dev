@@ -1,0 +1,34 @@
+{
+  "catalog": [
+    {
+      "id": 1,
+      "url": "#",
+      "title": "go",
+      "title-accent": "pro",
+      "bg": "bg-4.jpg",
+      "image": "02.png",
+      "imageWebp": "02.webp",
+      "price": "1500$"
+    },
+    {
+      "id": 2,
+      "url": "#",
+      "title": "go",
+      "title-accent": "pro",
+      "bg": "bg-4.jpg",
+      "image": "02.png",
+      "imageWebp": "02.webp",
+      "price": "1500$"
+    },
+    {
+      "id": 3,
+      "url": "#",
+      "title": "go",
+      "titleAccent": "pro",
+      "bg": "bg-4.jpg",
+      "image": "02.png",
+      "imageWebp": "02.webp",
+      "price": "1500$"
+    }
+  ]
+}

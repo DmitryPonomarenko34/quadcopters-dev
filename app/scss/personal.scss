@@ -1,0 +1,68 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
+@import 'components/header';
+@import 'components/footer';
+
+
+.personal {
+  padding: 58px 0 165px;
+  background-image: url('../images/content/faq/decor.png');
+  background-repeat: no-repeat;
+  background-position: 90% bottom;
+  background-size: 34%;
+
+  &__title {
+    margin-bottom: 90px;
+    text-align: center;
+  }
+
+  &__list {}
+
+  &__list-item,
+  &__link {
+    @extend %gothampro-medium;
+    font-size: 14px;
+  }
+
+  &__list-item {
+    margin-bottom: 19px;
+  }
+
+  &__list-link {
+    display: inline-block;
+    color: $bg;
+  }
+
+  &__link {
+    display: inline-block;
+    color: #FF5656;
+    text-decoration: underline;
+  }
+}
+
+.user-action {
+  display: flex;
+  align-items: center;
+}
+
+.user-area {
+  margin-bottom: 5px;
+  &__box {
+    text-align: center;
+    margin-right: 35px;
+  }
+
+  &__text {
+    font-size: 14px;
+    display: block;
+    max-width: 100px;
+    color: $accent;
+    @extend %gothampro-medium;
+  }
+}
+
+
+
+@import 'media';
